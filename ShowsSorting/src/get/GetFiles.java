@@ -18,7 +18,9 @@ public class GetFiles {
 				showFolder = new File("E:\\OwnCloud\\"+listOfFiles[i].getName()+"");
 				File[] listOfFileInFolder = showFolder.listFiles();
 				for (File file : listOfFileInFolder ){
+					System.out.println("OK1");
 					if (file.toString().matches("(.*)VOSTFR(.*)")){
+						System.out.println("OK2");
 						try {
 							if(Files.probeContentType(file.toPath()).matches("video(.*)")){
 								System.out.println("video :"+file.getName());
